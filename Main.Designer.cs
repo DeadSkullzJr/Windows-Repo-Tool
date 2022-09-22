@@ -180,7 +180,7 @@ namespace WindowsRepoTool
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Main";
-            this.Text = "Windows Repo Tool v2.0.0";
+            this.Text = "Windows Repo Tool (v2.0.1)";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
