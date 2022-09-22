@@ -135,7 +135,7 @@ namespace WindowsRepoTool
             this.detailsBox.Multiline = true;
             this.detailsBox.Name = "detailsBox";
             this.detailsBox.ReadOnly = true;
-            this.detailsBox.ShortcutsEnabled = false;
+            this.detailsBox.ShortcutsEnabled = true;
             this.detailsBox.Size = new System.Drawing.Size(609, 164);
             this.detailsBox.TabIndex = 10;
             // 
