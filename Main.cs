@@ -193,7 +193,7 @@ namespace WindowsRepoTool
                 else
                 {
                     string title = "Notice";
-                    string message = "Please Type In A Repo";
+                    string message = "Please type in a repository link.";
                     MessageBox.Show(message, title);
                     return;
                 }
@@ -203,7 +203,7 @@ namespace WindowsRepoTool
                 addRepoBox.Clear();
                 addRepoBox.Text = "https://";
                 string title = "Notice";
-                string message = "You Already Have This Repo Added";
+                string message = "You already have this repository added.";
                 MessageBox.Show(message, title);
                 return;
             };
@@ -212,7 +212,7 @@ namespace WindowsRepoTool
         private void clearAllReposBtn_Click(object sender, EventArgs e)
         {
             string title = "Notice";
-            string message = "Are you sure you want to clear all added repos?";
+            string message = "Are you sure you want to clear the current repository list?";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show(message, title, buttons);
             if (result == DialogResult.Yes)
@@ -226,7 +226,7 @@ namespace WindowsRepoTool
                 }
                 SaveFile.Close();
                 string titlefinal = "Notice";
-                string messagefinal = "Cleared All Repos Successfully";
+                string messagefinal = "Cleared the repository list successfully!";
                 MessageBox.Show(messagefinal, titlefinal);
                 return;
             }
@@ -241,14 +241,14 @@ namespace WindowsRepoTool
             if (repoListBox.SelectedItem == null)
             {
                 string titlefinal = "Notice";
-                string messagefinal = "Please select a repo";
+                string messagefinal = "Please select a repository.";
                 MessageBox.Show(messagefinal, titlefinal);
                 return;
             }
             else
             {
                 string title = "Notice";
-                string message = "Are you sure you want to clear the selected repo?";
+                string message = "Are you sure you want to clear the selected repository?";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result = MessageBox.Show(message, title, buttons);
                 if (result == DialogResult.Yes)
@@ -262,7 +262,7 @@ namespace WindowsRepoTool
                     }
                     SaveFile.Close();
                     string titlefinal = "Notice";
-                    string messagefinal = "Cleared The Selected Repo Successfully";
+                    string messagefinal = "Cleared the selected repository successfully!";
                     MessageBox.Show(messagefinal, titlefinal);
                     return;
                 }
@@ -278,7 +278,7 @@ namespace WindowsRepoTool
             if (repoListBox.SelectedItem == null)
             {
                 string titlefinal = "Notice";
-                string messagefinal = "Please select a repo";
+                string messagefinal = "Please select a repository.";
                 MessageBox.Show(messagefinal, titlefinal);
                 return;
             }
@@ -301,7 +301,7 @@ namespace WindowsRepoTool
                         if (check == repoListBox.SelectedItem.ToString())
                         {
                             string title = "Warning";
-                            string message = "You are about to open a repo that has been flagged as Dangerous, are you sure you want to open it?";
+                            string message = "You are about to open a repository that is flagged as dangerous, are you sure you want to open this repository?";
                             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                             DialogResult result = MessageBox.Show(message, title, buttons);
                             if (result == DialogResult.Yes)
@@ -380,7 +380,7 @@ namespace WindowsRepoTool
                             catch (Exception ExThree)
                             {
                                 string titlefinal = "Notice";
-                                string messagefinal = "Unable to connect to repo, are you connected to the internet and did you type the repo url correctly? \n\n" + ExThree;
+                                string messagefinal = "Unable to connect to the repository, double check your internet connection and or make sure you typed the repository link correctly. \n\n" + ExThree;
                                 MessageBox.Show(messagefinal, titlefinal);
                                 return;
                             }
@@ -467,7 +467,7 @@ namespace WindowsRepoTool
             if (packagesListBox.SelectedItem == null)
             {
                 string titlefinal = "Notice";
-                string messagefinal = "Please select a package";
+                string messagefinal = "Please select a Debian package.";
                 MessageBox.Show(messagefinal, titlefinal);
                 return;
             }
@@ -489,13 +489,13 @@ namespace WindowsRepoTool
                     client.Headers.Add("User-Agent", "Telesphoreo APT-HTTP/1.0.592");
                     client.DownloadFile(downloadURL, $"Debs/{selectedPackageItem}.deb");
                     string titlefinal = "Notice";
-                    string messagefinal = "Download Complete, Deb Is Located In The Debs Folder";
+                    string messagefinal = "Download complete, the Debian package is located in the Debs folder.";
                     MessageBox.Show(messagefinal, titlefinal);
                 }
                 catch (Exception Ex)
                 {
                     string titleexception = "Notice";
-                    string messageexception = "You can't download paid packages with Windows Repo Tool";
+                    string messageexception = "You are not able to download commercial Debian packages using this tool.";
                     MessageBox.Show(messageexception, titleexception);
                 }
             }
